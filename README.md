@@ -5,94 +5,125 @@
 ![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
 ![Status](https://img.shields.io/badge/Status-Active-green?style=for-the-badge)
 
+
 ## 💀 Overview
 M3taHunterz is a GUI-based tool designed for **Open Source Intelligence (OSINT)** analysis and **Privacy Protection (Anti-Forensics)**. Unlike standard command-line tools, it provides a visual interface to extract, map, clean, and spoof metadata from digital imagery.
 
 It features an **Offline-First** architecture, allowing investigators to map GPS coordinates without an active internet connection (after caching).
 
-## ⚡ Features
+## ⚡ Features (v1)
 
 ### 🔍 Analysis (Blue Team)
 * **Deep Metadata Extraction:** View hidden EXIF tags (Software, Hardware, Dates).
-* **Offline GPS Mapping:** Automatically plots coordinates on an interactive map.
-* **Visual Watermarking:** Custom UI with transparent overlay support.
+* **Live Map & Preview:** Split-screen view showing the target image alongside its GPS location on an interactive map.
+* **Smart Dashboard:** Double-click any metadata line to **Quick Edit** (Safe Mode automatically backs up original files).
+* **Clipboard Support:** One-click "Copy All" button for easy reporting.
 
 ### 🛡️ Counter-Forensics (Red Team)
 * **Evidence Scrubbing:** One-click removal of all metadata to sanitize files for safe sharing.
-* **GPS Spoofing:** Inject fake GPS coordinates (Decimal format supported) into images.
-* **Tag Injection:** Plant false flags (Fake Camera Models, Software versions, Copyrights).
+* **Advanced Spoofing:** Inject fake GPS coordinates and modify critical hardware IDs.
+* **Tag Injection:** Plant false flags including:
+    * `BodySerialNumber` (Fake specific device IDs)
+    * `CameraOwnerName` (Impersonate ownership)
+    * `LensMake` / `LensModel`
 
 ### 🎨 Customization
-* **Theming:** Fully customizable UI via `styles.py`.
+* **Theming:** Hacker-style dark UI with static logo positioning.
 * **Privacy Mode:** Integrated history wiper to delete local map caches (`.db` files).
 
-## 📦 Installation
+## 🛠️ Prerequisites & Installation
 
-1.  **Clone the repository**
-    ```bash
-    git clone [https://github.com/YOUR_USERNAME/M3taHunterz.git](https://github.com/YOUR_USERNAME/M3taHunterz.git)
-    cd M3taHunterz
-    ```
+*Install Libraries*
+```
+pip install -r requirements.txt
+```
 
-2.  **Install Dependencies**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-## 🚀 Usage
-
-Run the main script:
+### 🪟 Windows
 ```bash
-python m3tahunter.py# 🕵️‍♂️ M3taHunterz
+# 1. Download
+git clone https://github.com/FrhnIsml/M3taHunterz.git
+cd M3taHunterz
 
-**Advanced OSINT & Anti-Forensics Utility**
+# 2. Install Requirements
+pip install -r requirements.txt
 
-![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
-![Status](https://img.shields.io/badge/Status-Active-green?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-orange?style=for-the-badge)
+# 3. Run
+python m3tahunter.py
+```
 
-## 💀 Overview
-M3taHunterz is a GUI-based tool designed for **Open Source Intelligence (OSINT)** analysis and **Privacy Protection (Anti-Forensics)**. Unlike standard command-line tools, it provides a visual interface to extract, map, clean, and spoof metadata from digital imagery.
+### 🐧 Linux (Terminal)
 
-It features an **Offline-First** architecture, allowing investigators to map GPS coordinates without an active internet connection (after caching).
+*Downloads*
+```
+git clone https://github.com/FrhnIsml/M3taHunterz.git
+cd M3taHunterz
+```
 
-## ⚡ Features
+```
+sudo apt install python3.12-venv
+```
 
-### 🔍 Analysis (Blue Team)
-* **Deep Metadata Extraction:** View hidden EXIF tags (Software, Hardware, Dates).
-* **Offline GPS Mapping:** Automatically plots coordinates on an interactive map.
-* **Visual Watermarking:** Custom UI with transparent overlay support.
+```Bash
+sudo apt-get update
+sudo apt-get install python3-tk
+```
 
-### 🛡️ Counter-Forensics (Red Team)
-* **Evidence Scrubbing:** One-click removal of all metadata to sanitize files for safe sharing.
-* **GPS Spoofing:** Inject fake GPS coordinates (Decimal format supported) into images.
-* **Tag Injection:** Plant false flags (Fake Camera Models, Software versions, Copyrights).
+*Create & Activate Virtual Environment:*
+```Bash
+# 1. Create the safe bubble (.venv)
+python3 -m venv .venv
 
-### 🎨 Customization
-* **Theming:** Fully customizable UI via `styles.py`.
-* **Privacy Mode:** Integrated history wiper to delete local map caches (`.db` files).
+# 2. Enter the bubble
+source .venv/bin/activate
+#You will see (.venv) appear on the left side of your terminal line.
 
-## 📦 Installation
+# 3. Install libraries safely inside
+pip install -r requirements.txt
 
-1.  **Clone the repository**
-    ```bash
-    git clone [https://github.com/YOUR_USERNAME/M3taHunterz.git](https://github.com/YOUR_USERNAME/M3taHunterz.git)
-    cd M3taHunterz
-    ```
+# 4. Run the tools
+python m3tahunter.py
+```
 
-2.  **Install Dependencies**
-    ```bash
-    pip install -r requirements.txt
-    ```
+*If you want to open for next times. Use this commands" (Daily Use)*
+
+Open your terminal and go to the folder:
+
+```Bash
+cd M3taHunterz
+source .venv/bin/activate
+python m3tahunter.py
+```
+
 
 ## 🚀 Usage
 
 Run the main script:
 ```bash
 python m3tahunter.py
+```
+
+## 🔄 Updating the Tool
+
+If you already have M3taHunterz installed and want to get the latest version:
+
+1. Open your terminal and go to the folder:
+   ```bash
+   cd M3taHunterz
+
+2. Pull the latest changes from GitHub:
+   ```Bash
+   git pull
+
+## 📥 Tools
+<img width="1247" height="954" alt="image" src="https://github.com/user-attachments/assets/3119e0cb-41cd-490e-ad74-1a03055389d0" />
 
 
-*⚠️ Disclaimer*
+
+
+
+
+
+### *⚠️ Disclaimer*
 FOR EDUCATIONAL AND PRIVACY PURPOSES ONLY.
 
 This tool is designed for security research, CTF competitions, and personal privacy protection. The developers assume no liability and are not responsible for any misuse or damage caused by this program. Do not use this tool to frame individuals or obstruct legal investigations.
@@ -100,4 +131,19 @@ This tool is designed for security research, CTF competitions, and personal priv
 *🤝 Contributing*
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-*📝 License*
+
+### *👤Creator*
+
+Farhan Ismail
+
+Cybersecurity student | Osint Researcher | CTF Player
+
+
+## 📄 License
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+This project is licensed under the **GNU General Public License v3.0 (GPLv3)**.
+
+You are free to use, study, and modify this code for educational purposes. However, if you distribute any modifications, they must also be open-source under the same license.
+
