@@ -1,4 +1,4 @@
-# 🕵️‍♂️ M3taHunterz
+# 🕵️‍♂️ M3taHunterz Beta
 
 **Advanced OSINT & Anti-Forensics Utility**
 
