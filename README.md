@@ -104,7 +104,7 @@ python m3tahunter.py
 
 ## 🔄 Updating the Tool
 
-If you already have M3taHunterz Lite installed and want to get the latest version:
+If you already have M3taHunterz Beta installed and want to get the latest version:
 
 1. Open your terminal and go to the folder:
    ```bash
