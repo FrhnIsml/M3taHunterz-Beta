@@ -136,7 +136,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Farhan Ismail
 
-Cybersecurity student | Osint Researcher | Digital Forencics Enthusiast | CTF Player
+Cybersecurity student | Osint Researcher | Digital Forensics Enthusiast | CTF Player
 
 
 ## 📄 License
